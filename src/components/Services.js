@@ -7,12 +7,14 @@ const Services = () => {
     <Wrapper>
       <div className="section-center">
         <article className="header">
-          <h3>custom furniture</h3>
+          <h3>
+            custom furniture <br /> built only for you
+          </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-            nostrum vel nisi architecto nulla deserunt dolorum non, veritatis
-            sint. Aperiam vero cumque dolor explicabo placeat soluta, illo
-            dolores rerum qui.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            sequi animi quo quia molestiae, nam commodi iste nemo, aut, quod
+            ullam perferendis dicta. Eligendi ullam sequi id facilis, eveniet
+            veniam!
           </p>
         </article>
         <div className="services-center">
