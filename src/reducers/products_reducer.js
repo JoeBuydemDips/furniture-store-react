@@ -16,7 +16,7 @@ const products_reducer = (state, action) => {
   if (action.type === SIDEBAR_CLOSE) {
     return { ...state, isSidebarOpen: false };
   }
-  if (action.type === GET_SINGLE_PRODUCT_BEGIN) {
+  if (action.type === GET_PRODUCTS_BEGIN) {
     return { ...state, products_loading: true };
   }
   if (action.type === GET_PRODUCTS_ERROR) {
@@ -31,6 +31,27 @@ const products_reducer = (state, action) => {
       products_loading: false,
       products: action.payload,
       featured_products,
+    };
+  }
+  if (action.type === GET_SINGLE_PRODUCT_BEGIN) {
+    return {
+      ...state,
+      single_products_loading: true,
+      single_products_error: false,
+    };
+  }
+  if (action.type === GET_SINGLE_PRODUCT_SUCCESS) {
+    return {
+      ...state,
+      single_products_loading: false,
+      single_products: action.payload,
+    };
+  }
+  if (action.type === GET_SINGLE_PRODUCT_ERROR) {
+    return {
+      ...state,
+      single_products_loading: false,
+      single_products_error: true,
     };
   }
 
