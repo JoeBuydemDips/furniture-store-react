@@ -24,7 +24,7 @@ const products_reducer = (state, action) => {
   }
   if (action.type === GET_PRODUCTS_SUCCESS) {
     const featured_products = action.payload.filter(
-      (product) => product.featured == true
+      (product) => product.featured === true
     );
     return {
       ...state,
@@ -44,7 +44,7 @@ const products_reducer = (state, action) => {
     return {
       ...state,
       single_products_loading: false,
-      single_products: action.payload,
+      single_product: action.payload,
     };
   }
   if (action.type === GET_SINGLE_PRODUCT_ERROR) {
