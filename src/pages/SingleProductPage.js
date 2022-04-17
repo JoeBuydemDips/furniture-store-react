@@ -54,6 +54,7 @@ const SingleProductPage = () => {
     images,
   } = product;
 
+  console.log(product);
   return (
     <Wrapper>
       <PageHero title={name} product />
@@ -81,7 +82,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 && <AddToCart />}
+            {stock > 0 && <AddToCart product />}
           </section>
         </div>
       </div>
